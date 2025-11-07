@@ -1,1 +1,181 @@
-<p1> Hello world </p1>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tudor — Space</title>
+  <meta name="description" content="Professional portfolio and projects." />
+  <style>
+    :root{
+      --ln-blue:#0073b1;
+      --muted:#6b7280;
+      --card-bg:#fff;
+      --page-bg:#f3f6f8;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      color:#111;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--page-bg);line-height:1.45}
+    header{background:linear-gradient(90deg,var(--ln-blue),#056aa8);color:#fff;padding:.6rem 1rem}
+    .nav{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    .brand{font-weight:700;letter-spacing:.2px}
+    .nav a{color:rgba(255,255,255,.95);text-decoration:none;margin-left:.75rem;font-weight:600}
+    .container{max-width:1100px;margin:1.25rem auto;padding:0 1rem;display:grid;grid-template-columns:320px 1fr;gap:1rem}
+    @media (max-width:900px){.container{grid-template-columns:1fr}.left{order:2}.right{order:1}}
+    .card{background:var(--card-bg);border-radius:8px;padding:1rem;box-shadow:0 2px 6px rgba(16,24,40,.06)}
+    .left .profile{display:flex;gap:1rem;align-items:center}
+    .avatar{width:88px;height:88px;border-radius:12px;object-fit:cover;background:linear-gradient(135deg,#e6f3fb,#d9eefc)}
+    h1{margin:.1rem 0;font-size:1.25rem}
+    .headline{color:var(--muted);font-size:.95rem;margin-bottom:.5rem}
+    .meta{color:var(--muted);font-size:.9rem}
+    .btn{display:inline-block;background:var(--ln-blue);color:#fff;padding:.45rem .75rem;border-radius:6px;text-decoration:none;font-weight:600}
+    .connect{background:#fff;color:var(--ln-blue);border:1px solid rgba(0,0,0,.04);padding:.45rem .75rem;border-radius:6px;font-weight:600}
+    /* Skills */
+    .skills{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.6rem}
+    .skill{background:#eef6fb;color:var(--ln-blue);padding:.35rem .6rem;border-radius:999px;font-size:.85rem}
+    /* Right column */
+    .section{margin-bottom:1rem}
+    .summary p{margin:.25rem 0;color:#111}
+    .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:.75rem}
+    .project{padding:.75rem;border-radius:8px;background:#fafbfd;border:1px solid rgba(3,102,155,.03)}
+    .project h3{margin:.1rem 0;font-size:1rem}
+    .project p{color:var(--muted);font-size:.9rem;margin:.35rem 0}
+    .exp{display:flex;flex-direction:column;gap:.5rem}
+    .exp-item{padding:.75rem;border-radius:8px;background:#fff;border:1px solid rgba(16,24,40,.04)}
+    .exp-item h4{margin:.05rem 0}
+    .exp-item .when{color:var(--muted);font-size:.9rem}
+    footer{max-width:1100px;margin:1.25rem auto;padding:0 1rem;color:var(--muted);font-size:.9rem}
+
+    /* make images inside a .card fit and stay responsive */
+    .card img.meta,
+    .card .interactive-gif {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 6px;
+      object-fit: cover;
+      max-height: 280px; /* reduce if you want a smaller GIF */
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand">marcutudor79</div>
+      <nav aria-label="Top navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" role="main">
+    <aside class="left">
+      <div class="card">
+        <div class="profile">
+          <img class="avatar" src="img/avatar.png" alt="Your Name avatar">
+          <div>
+            <h1> </h1>
+            <div class="headline">Engineer • Software • Electronics • Others </div>
+          </div>
+        </div>
+
+        <div style="margin-top:.75rem;display:flex;gap:.5rem">
+          <a class="btn" href="#contact">Connect</a>
+          <a class="connect" href="https://github.com/marcutudor79" target="_blank" rel="noopener">GitHub</a>
+        </div>
+
+        <div style="margin-top:.9rem">
+          <strong style="font-size:.95rem">Top skills</strong>
+          <div class="skills">
+            <span class="skill">C </span>
+            <span class="skill">Java </span>
+            <span class="skill">Verilog</span>
+          </div>
+        </div>
+
+        <div style="margin-top:.9rem">
+          <strong style="font-size:.95rem"> About me </strong>
+          <p class="meta" style="margin:.35rem 0 0"> With my experience in embedded systems I am trying to integrate it
+            with web technologies to create innovative solutions to real world problems. Currently interested in how
+            Machine Learning can be used to improve both fields.
+          </p>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:1rem">
+        <strong style="font-size:.95rem">Contact</strong>
+        <p class="meta" style="margin:.5rem 0 0">Email: <a href="mailto:marcutudor5@gmail.com">marcutudor5@gmail.com</a></p>
+        <p class="meta">Location: Europe </p>
+      </div>
+
+      <div class="card" style="margin-top:1rem">
+
+        <!-- replaced: make the img responsive and accessible -->
+        <img class="meta interactive-gif" src="/img/monsieur.gif" alt="Animation" style="margin:.5rem 0 0" />
+      </div>
+    </aside>
+
+    <section class="right">
+      <div class="card section" id="about">
+        <h2 style="margin:.1rem 0">About 👋 </h2>
+        <div class="summary">
+          <p>I am building both embedded applications and distributed web
+            applications. My area of expertise is currently expanding in the Machine Learning Area,
+            with the help of which, I want to enhance the experience in both Web and Embedded fields. </p>
+        </div>
+      </div>
+
+      <div class="card section" id="projects">
+        <h2 style="margin:.1rem 0">Featured Projects</h2>
+        <div class="projects-grid">
+          <article class="project">
+            <h3>FS Car Dashboard </h3>
+            <p>Developed the PCB of the dashboard as well as the Software. Used C, ESP-IDF, KiCAD. <a href="https://github.com/marcutudor79/electronic-module-for-the-dashboard-of-upbdrive-racing-car/tree/main/Dashboard-module/Software/Firmware" target="_blank" rel="noopener">Code</a></p>
+          </article>
+
+          <article class="project">
+            <h3>Distributed Robot Factory Simulator</h3>
+            <p>Split a monolithic MVC application into multiple ones.
+                Used Java, Spring Boot, Jackson. <a href="https://github.com/marcutudor79/parallel-factory-sim" target="_blank" rel="noopener">Code</a>
+            </p>
+          </article>
+        </div>
+      </div>
+
+      <div class="card section" id="experience">
+        <h2 style="margin:.1rem 0">Experiences</h2>
+        <div class="exp">
+          <div class="exp-item">
+            <h4> UPBDrive Formula Student Electronics Dept. Adjutant </h4>
+            <div class="when">2022 — 2024 · Garage </div>
+            <p class="meta"> Responsible for the design and implementation of the car's
+                electronic systems, including the PCB design, embedded software development,
+                and integration of various sensors and actuators. Also sometimes involved in spreading
+                the culture of "Trepăduș", which, for english speakers is pronounced as trepəduʃ,
+                among team members and students of politechnic
+            </p>
+          </div>
+
+          <div class="exp-item">
+            <h4>Junior Instructor CCNA</h4>
+            <div class="when">2021 — 2023 · Faculty</div>
+            <p class="meta"> Assisted in teaching networking concepts and practical skills to students,
+                helping them prepare for the CCNA certification. Conducted lab sessions,
+                provided guidance on networking projects, and supported students in understanding
+                complex topics related to network infrastructure and protocols. Also participated in
+                teambuildings activities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>© 2025 Tudor · <a href="https://github.com/your-username/marcutudor79.github.io" target="_blank" rel="noopener">Source</a></div>
+  </footer>
+</body>
+</html>
